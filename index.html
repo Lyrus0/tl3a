@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOXLOG — En construction</title>
+    <style>
+      :root {
+        --bg: #000;
+        --primary: #ff2d2d;
+        --accent: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--accent);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", system-ui, sans-serif;
+        overflow: hidden;
+      }
+
+      img {
+        width: 500px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        animation: fadeIn 1.2s ease forwards;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, var(--primary), #ff6f00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 3s ease-in-out infinite alternate;
+      }
+
+      p {
+        margin-top: 1rem;
+        color: #aaa;
+        font-size: 1.2rem;
+      }
+
+      .loader {
+        margin-top: 3rem;
+        width: 60px;
+        height: 60px;
+        border: 6px solid rgba(255, 255, 255, 0.1);
+        border-top-color: var(--primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px var(--primary);
+        }
+        to {
+          text-shadow: 0 0 25px #ff6f00;
+        }
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 1rem;
+        color: #555;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="boxlog.jpg" alt="BOXLOG Logo" />
+    <h1>En construction</h1>
+    <p>Spécialisé en logistique et livraison express</p>
+    <div class="loader"></div>
+    <footer>© 2025 BOXLOG — Tous droits réservés</footer>
+  </body>
+</html>
